@@ -6,20 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-   
+    
     public function up(): void
     {
-        Schema::create('plataforma', function(Blueprint $table){
-            $table->id('id_plataforma');
-            $table->string('nome_plataforma');
-            $table->timestamp();
-            
+        Schema::create('generos', function(Blueprint $table){
+            $table->id('id_genero');
+            $table->string('nome_genero');
         });
     }
 
     
     public function down(): void
     {
-        Schema::DropIfExists('plataforma');
+        Schema::DropIfExists('generos');
     }
 };
